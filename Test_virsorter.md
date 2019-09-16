@@ -2,7 +2,11 @@
 
 # virsorter to pick virus contigs out
 
-wrapper_phage_contigs_sorter_iPlant.pl --fasta sequences.fa --db 2 --ncpu <cpu #>
+wrapper_phage_contigs_sorter_iPlant.pl --fna <sequences.fa> --db 2 --ncpu <cpu#>  
+#key things
+1, use --db 2
+2, use blastp default
+3, --virome, off, default one
 
 
 #the enrichment culture of Jordan

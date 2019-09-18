@@ -25,7 +25,7 @@ BEGIN failed--compilation aborted at /opt/VirSorter/wrapper_phage_contigs_sorter
 ##virsorter on zenith
 ```
 source /opt/Miniconda2/miniconda2/bin/activate   virsorter
-wrapper_phage_contigs_sorter_iPlant.pl --fna scaffold.fa --db 2 --ncpu 4 --data-dir /opt/virsorter-data
+wrapper_phage_contigs_sorter_iPlant.pl --fna scaffold.fa --db 2 --ncpu 6 --data-dir /opt/virsorter-data
 
 To deactivate the environment when done:
 source /opt/Miniconda2/miniconda2/bin/deactivate
@@ -35,6 +35,13 @@ source /opt/Miniconda2/miniconda2/bin/deactivate
 ```
 cd /home/projects/Wetlands/2014-2015_sampling/Methanogen_OWC_enrichment_2015/idba_assembled_output
 scaffold.fa
-screen -S virsorter_jordan_enrichment_idba_congits
-/opt/VirSorter/wrapper_phage_contigs_sorter_iPlant.pl --fna scaffold.fa --db 2 --ncpu 4 --data-dir /opt/virsorter-data
+
+# >scaffold_0 
+sed -e 's/>scaffold_/>OwcEnrich2015IDBA_scaffold_/1' scaffold.fa > OwcEnrich2015IDBA.fa
+
+screen -r virsorter_jordan_enrichment_idba_congits
+#4:19pm, 18Sept2019-
+
+source /opt/Miniconda2/miniconda2/bin/activate   virsorter
+wrapper_phage_contigs_sorter_iPlant.pl --fna OwcEnrich2015IDBA.fa --db 2 --ncpu 6 --data-dir /opt/virsorter-data & > OwcEnrich2015IDBA_virsorter.log
 ```

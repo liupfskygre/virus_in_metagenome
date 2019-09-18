@@ -74,7 +74,7 @@ sed -i -e 's/>\(k.*\)/>AugM2C1D1MC_\1/1' AugM2C1D1MC.fa  #MC stands for Megahit_
 cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit/Aug_M2_C1_D5_reads_and_megahit_full_assembly/Aug_M2_C1_D5_megahit_assembly
 head Aug_M2_C1_D5_megahit.contigs.fa
 sed -e 's/>\(k.*\).*flag.*$/>\1/1' Aug_M2_C1_D5_megahit.contigs.fa >AugM2C1D5MC.fa
-sed -i -e 's/>\(k.*\)/>AugM2C1D5MC_\1/1’ AugM2C1D5MC.fa  #MC stands for Megahit_Contigs
+sed -i -e 's/>\(k.*\)/>AugM2C1D5MC_\1/1' AugM2C1D5MC.fa  #MC stands for Megahit_Contigs
 ```
 
 **8, Aug_N3_C1_D1_megahit_assembly	1	Aug_N3_C1_D1 Megahit full assembly	
@@ -83,7 +83,7 @@ sed -i -e 's/>\(k.*\)/>AugM2C1D5MC_\1/1’ AugM2C1D5MC.fa  #MC stands for Megahi
 cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit/Aug_N3_C1_D1_reads_and_megahit_full_assembly/Aug_N3_C1_D1_megahit_assembly
 head Aug_N3_C1_D1_megahit.contigs.fa
 sed -e 's/>\(k.*\).*flag.*$/>\1/1' Aug_N3_C1_D1_megahit.contigs.fa >AugN3C1D1MC.fa
-sed -i -e 's/>\(k.*\)/>AugN3C1D1MC_\1/1’ AugN3C1D1MC.fa  #MC stands for Megahit_Contigs
+sed -i -e 's/>\(k.*\)/>AugN3C1D1MC_\1/1' AugN3C1D1MC.fa  #MC stands for Megahit_Contigs
 ```
 
 **9, Aug_N3_C1_D5_megahit_assembly	1	Aug_N3_C1_D5 Megahit full assembly	
@@ -92,7 +92,7 @@ sed -i -e 's/>\(k.*\)/>AugN3C1D1MC_\1/1’ AugN3C1D1MC.fa  #MC stands for Megahi
 cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit/Aug_N3_C1_D5_reads_and_megahit_full_assembly/Aug_N3_C1_D5_megahit_assembly
 head Aug_N3_C1_D5_megahit.contigs.fa
 sed -e 's/>\(k.*\).*flag.*$/>\1/1' Aug_N3_C1_D5_megahit.contigs.fa >AugN3C1D5MC.fa
-sed -i -e 's/>\(k.*\)/>AugN3C1D5MC_\1/1’ AugN3C1D5MC.fa  #MC stands for Megahit_Contigs
+sed -i -e 's/>\(k.*\)/>AugN3C1D5MC_\1/1' AugN3C1D5MC.fa  #MC stands for Megahit_Contigs
 ```
 
 **10, Aug_OW2_C1_D1_megahit_assembly	1	Aug_OW2_C1_D1 Megahit full assembly	
@@ -175,7 +175,7 @@ cd /home/projects/Wetlands/2018_sampling/methyl_enrichment2018_metaG/NoSub_Soil_
 head NoSub_Soil_T3_3_megahit.contigs.fa
 sed -e 's/>\(k.*\).*flag.*$/>\1/1' NoSub_Soil_T3_3_megahit.contigs.fa >NoSubSoilT33MC.fa
 
-sed -i -e 's/>\(k.*\)/>NoSubSoilT33MC_\1/1’ NoSubSoilT33MC.fa  #MC stands for Megahit_Contigs
+sed -i -e 's/>\(k.*\)/>NoSubSoilT33MC_\1/1' NoSubSoilT33MC.fa  #MC stands for Megahit_Contigs
 ```
 **19, OWC_substrative_co_megahit_Deep.contigs.fa	1	OWC16 subtractive coassembly deep, assembly
 ```

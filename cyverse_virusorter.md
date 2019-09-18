@@ -5,7 +5,7 @@
 Add the sample name of to header 
 #sampleidentifierwithoutunderscores_scaffold_0
 sed -e 's/>\(k.*\)/>\1_/1'
-``
+```
 # example for megahit contigs
 ```
 head Aug_M1_C1_D1_megahit.contigs.fa > example.fa
@@ -26,6 +26,34 @@ sed -i -e 's/>\(k.*\)/>AugM1C1D1MC_\1/1' AugM1C1D1MC.fa  #MC stands for Megahit_
 
 ```
 cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit/Aug_M1_C1_D2_reads_and_megahit_full_assembly/Aug_M1_C1_D2_megahit_assembly
+head Aug_M1_C1_D2_megahit.contigs.fa
 sed -e 's/>\(k.*\).*flag.*$/>\1/1' Aug_M1_C1_D2_megahit.contigs.fa >AugM1C1D2MC.fa
 sed -i -e 's/>\(k.*\)/>AugM1C1D2MC_\1/1' AugM1C1D2MC.fa  #MC stands for Megahit_Contigs
+```
+
+**3, Aug_M1_C1_D3_megahit_assembly	1	Aug_M1_C1_D3 Megahit full assembly	
+
+```
+cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit/Aug_M1_C1_D3_reads_and_megahit_full_assembly/Aug_M1_C1_D3_megahit_assembly
+head Aug_M1_C1_D3_megahit.contigs.fa
+sed -e 's/>\(k.*\).*flag.*$/>\1/1' Aug_M1_C1_D3_megahit.contigs.fa >AugM1C1D3MC.fa
+sed -i -e 's/>\(k.*\)/>AugM1C1D3MC_\1/1' AugM1C1D3MC.fa  #MC stands for Megahit_Contigs
+```
+
+**4, Aug_M1_C1_D4_megahit_assembly	1	Aug_M1_C1_D4 Megahit full assembly	
+
+```
+cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit/Aug_M1_C1_D4_reads_and_megahit_full_assembly/Aug_M1_C1_D4_megahit_assembly
+head Aug_M1_C1_D4_megahit.contigs.fa
+sed -e 's/>\(k.*\).*flag.*$/>\1/1' Aug_M1_C1_D4_megahit.contigs.fa >AugM1C1D4MC.fa
+sed -i -e 's/>\(k.*\)/>AugM1C1D4MC_\1/1' AugM1C1D4MC.fa  #MC stands for Megahit_Contigs
+```
+
+**5, Aug_M1_C1_D5_megahit_assembly	1	Aug_M1_C1_D5 Megahit full assembly	
+
+```
+cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit/Aug_M1_C1_D5_reads_and_megahit_full_assembly/Aug_M1_C1_D5_megahit_assembly
+head Aug_M1_C1_D5_megahit.contigs.fa
+sed -e 's/>\(k.*\).*flag.*$/>\1/1' Aug_M1_C1_D5_megahit.contigs.fa >AugM1C1D5MC.fa
+sed -i -e 's/>\(k.*\)/>AugM1C1D5MC_\1/1' AugM1C1D5MC.fa  #MC stands for Megahit_Contigs
 ```

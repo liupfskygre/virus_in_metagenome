@@ -54,4 +54,7 @@ Contig_id 1; Category, 5;
 **Notes**
 ```
 what i usually do after that is import the viral counts to Geneious and then filter out anything that is less than 10kb except if it is circular, in which case i take it no matter what the size
+
+1.0.5 on zenith #fixed the prophage issue in 1.0.3
+
 ```

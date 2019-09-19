@@ -45,3 +45,8 @@ screen -r virsorter_jordan_enrichment_idba_congits
 source /opt/Miniconda2/miniconda2/bin/activate   virsorter
 wrapper_phage_contigs_sorter_iPlant.pl --fna OwcEnrich2015IDBA.fa --db 2 --ncpu 6 --data-dir /opt/virsorter-data & > OwcEnrich2015IDBA_virsorter.log
 ```
+
+```
+## Contig_id 1,Nb genes contigs2,Fragment3,Nb genes4,Category5,Nb phage hallmark genes6,Phage gene enrichment sig7,Non-Caudovirales phage gene enrichment sig8,Pfam depletion sig9,Uncharacterized enrichment sig10,Strand switch depletion sig11,Short genes enrichment sig12
+```
+Contig_id 1; Category, 5; 

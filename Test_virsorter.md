@@ -50,3 +50,8 @@ wrapper_phage_contigs_sorter_iPlant.pl --fna OwcEnrich2015IDBA.fa --db 2 --ncpu 
 ## Contig_id 1,Nb genes contigs2,Fragment3,Nb genes4,Category5,Nb phage hallmark genes6,Phage gene enrichment sig7,Non-Caudovirales phage gene enrichment sig8,Pfam depletion sig9,Uncharacterized enrichment sig10,Strand switch depletion sig11,Short genes enrichment sig12
 ```
 Contig_id 1; Category, 5; 
+
+**Notes**
+```
+what i usually do after that is import the viral counts to Geneious and then filter out anything that is less than 10kb except if it is circular, in which case i take it no matter what the size
+```

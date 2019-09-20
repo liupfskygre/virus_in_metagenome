@@ -239,3 +239,49 @@ sed -e 's/>\(k.*\).*flag.*$/>\1/1' O3C3D4_DDIG_MN_megahit_assembly.contigs.fa >O
 sed -i -e 's/>\(k.*\)/>O3C3D4DdigMC_\1/1' O3C3D4DdigMC.fa  #MC stands for Megahit_Contigs
 
 ```
+
+**26 M3C4D3_v1_scaffolds.fasta** 
+```
+cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
+head M3C4D3_v1_scaffolds.fasta
+#sed -e 's/>\(k.*\).*flag.*$/>\1/1' O3C3D4_DDIG_MN_megahit_assembly.contigs.fa >O3C3D4DdigMC.fa
+sed -e 's/>\(scaffold.*\)/>M3C4D3v1MC_\1/1' M3C4D3_v1_scaffolds.fasta > M3C4D3v1MC_.fa
+```
+**27 M3C4D3_v2_scaffolds.fasta**
+```
+cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
+head M3C4D3_v2_scaffolds.fasta 
+
+sed -e 's/>\(scaffold.*\)/>M3C4D3v2MC_\1/1' M3C4D3_v2_scaffolds.fasta  > M3C4D3v2MC.fa
+```
+**28 M3C4D4_scaffolds.fasta**
+```
+cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
+head M3C4D4_scaffolds.fasta 
+
+sed -e 's/>\(scaffold.*\)/>M3C4D4MC_\1/1' M3C4D4_scaffolds.fasta  > M3C4D4MC.fa
+
+```
+**29 O3C3D3_scaffolds.fasta**
+```
+
+cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
+head O3C3D3_scaffolds.fasta 
+
+sed -e 's/>\(scaffold.*\)/>O3C3D3MC_\1/1' O3C3D3_scaffolds.fasta  > O3C3D3MC.fa
+```
+**30 O3C3D4_scaffolds.fasta
+```
+cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
+head O3C3D4_scaffolds.fasta
+
+sed -e 's/>\(scaffold.*\)/>O3C3D4MC_\1/1' O3C3D3_scaffolds.fasta  > O3C3D4MC.fa
+
+
+```
+
+**31 
+```
+Enrichenment_2015_Jordan
+
+```

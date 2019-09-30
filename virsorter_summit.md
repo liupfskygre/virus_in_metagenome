@@ -80,18 +80,26 @@ $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh Owc
 
 $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa
 
+
+## following use high mem, 48 cores, long
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  21G Sep 30 12:22 
-/projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh M3C5D1DdigMC
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh M3C5D1DdigMC
+3231565      smem virsorte liupf@co PD       0:00      1 (Priority)
 
-#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  20G Sep 30 12:25 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D1DdigMC
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  20G Sep 30 12:25 
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D1DdigMC
 
-#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  19G Sep 30 12:27 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D3DdigMC
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  19G Sep 30 12:27 
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D3DdigMC
 
-#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  18G Sep 30 12:30 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D4DdigMC
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  18G Sep 30 12:30 
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D4DdigMC
 
-#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  38G Sep 30 12:12 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcDeepSubCoMC
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  38G Sep 30 12:12 
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcDeepSubCoMC
 
-#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  55G Sep 30 12:16 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcSurfaceSubCoMC
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  55G Sep 30 12:16  
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcSurfaceSubCoMC
 
 ```
 #test
@@ -99,14 +107,25 @@ $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C
 cd /scratch/summit/liupf@colostate.edu/OWC_contigs_for_virsorter
 conda activate virsorter
 wrapper_phage_contigs_sorter_iPlant.pl --fna NoSubSoilT33MC.fa --db 2 --ncpu 1 --data-dir /scratch/summit/liupf@colostate.edu/scripts/virsorterDB/virsorter-data 
-
+# worked
 
 ```
-
-
 #
 ```
-/projects/liupf@colostate.edu/
-
+(base) [liupf@colostate.edu@shas0136 OWC_contigs_for_virsorter]$ squeue |grep liupf
+           3231516      shas mapping_ liupf@co PD       0:00      1 (Priority)
+           3231565      smem virsorte liupf@co PD       0:00      1 (Priority)
+           3231569      smem virsorte liupf@co PD       0:00      1 (Priority)
+           3231570      smem virsorte liupf@co PD       0:00      1 (Priority)
+           3231571      smem virsorte liupf@co PD       0:00      1 (Priority)
+           3231572      smem virsorte liupf@co PD       0:00      1 (Priority)
+           3231573      smem virsorte liupf@co PD       0:00      1 (Priority)
+           3231530      shas mapping_ liupf@co PD       0:00      1 (Priority)
+           3231532      shas mapping_ liupf@co PD       0:00      1 (Priority)
+           3231531      shas mapping_ liupf@co PD       0:00      1 (Priority)
+           3231534      shas mapping_ liupf@co PD       0:00      1 (Priority)
+           3231535      shas mapping_ liupf@co PD       0:00      1 (Priority)
+           3231537      shas mapping_ liupf@co PD       0:00      1 (Priority)
+           3231538      shas mapping_ liupf@co PD       0:00      1 (Priority)
 
 ```

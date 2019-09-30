@@ -56,14 +56,20 @@ mkdir OWC_contigs_for_virsorter
 ```
 
 ```
-conda activate virsorter
+#conda activate vs_105
+use source activate vs_105 inside slurm
 #
 # To deactivate an active environment, use
 #
 #     $ conda deactivate
 
+
+$# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh OwcEnrich2015IDBA 
+
 #485M Sep 30 12:09 NoSubSoilT33MC.fa
-$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC
+# no results???
 
 $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v1MC
 
@@ -75,8 +81,7 @@ $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoS
 
 $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D3MC
 
-$# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
-$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh OwcEnrich2015IDBA 
+
 
 $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa
 
@@ -105,27 +110,22 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcSur
 #test
 ```
 cd /scratch/summit/liupf@colostate.edu/OWC_contigs_for_virsorter
-conda activate virsorter
+conda activate virsorter # not working in slurm scripts, 
 wrapper_phage_contigs_sorter_iPlant.pl --fna NoSubSoilT33MC.fa --db 2 --ncpu 1 --data-dir /scratch/summit/liupf@colostate.edu/scripts/virsorterDB/virsorter-data 
 # worked
 
 ```
+## notes
+```
+#1, use 
+source activate vs_105 #inside slurm
+
+#2, install by miniconda directly instead of github help page, 
+
+```
+
+
 #
 ```
-(base) [liupf@colostate.edu@shas0136 OWC_contigs_for_virsorter]$ squeue |grep liupf
-           3231516      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231565      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231569      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231570      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231571      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231572      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231573      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231530      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231532      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231531      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231534      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231535      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231537      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231538      shas mapping_ liupf@co PD       0:00      1 (Priority)
-
+scancel
 ```

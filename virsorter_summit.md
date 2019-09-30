@@ -64,12 +64,14 @@ use source activate vs_105 inside slurm
 #     $ conda deactivate
 
 
-$# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh OwcEnrich2015IDBA 
+cd /scratch/summit/liupf@colostate.edu/OWC_contigs_for_virsorter
 
 #485M Sep 30 12:09 NoSubSoilT33MC.fa
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC
-# no results???
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC ##
+# no results??? dir of data is not right
+
+$# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh OwcEnrich2015IDBA 
 
 $ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v1MC
 

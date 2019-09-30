@@ -61,24 +61,37 @@ conda activate virsorter
 # To deactivate an active environment, use
 #
 #     $ conda deactivate
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 4.3G Sep 30 12:21 M3C4D3v1MC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 4.9G Sep 30 12:20 M3C4D3v2MC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 5.6G Sep 30 12:19 M3C4D4MC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  21G Sep 30 12:22 M3C5D1DdigMC.fa
 
 #485M Sep 30 12:09 NoSubSoilT33MC.fa
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC
 
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 297M Sep 30 12:08 NoSubSoilTF1MC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  20G Sep 30 12:25 O3C3D1DdigMC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  19G Sep 30 12:27 O3C3D3DdigMC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 5.3G Sep 30 12:19 O3C3D3MC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  18G Sep 30 12:30 O3C3D4DdigMC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 5.3G Sep 30 12:20 O3C3D4MC.fa
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  38G Sep 30 12:12 OwcDeepSubCoMC.fa
-# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
-sbatch run_virsorter_summit_24h.sh OwcEnrich2015IDBA 
--rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  55G Sep 30 12:16 OwcSurfaceSubCoMC.fa
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v1MC
+
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v2MC
+
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D4MC
+
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilTF1MC
+
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D3MC
+
+$# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh OwcEnrich2015IDBA 
+
+$ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa
+
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  21G Sep 30 12:22 
+/projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh M3C5D1DdigMC
+
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  20G Sep 30 12:25 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D1DdigMC
+
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  19G Sep 30 12:27 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D3DdigMC
+
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  18G Sep 30 12:30 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh O3C3D4DdigMC
+
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  38G Sep 30 12:12 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcDeepSubCoMC
+
+#-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  55G Sep 30 12:16 /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcSurfaceSubCoMC
 
 ```
 #test
@@ -91,7 +104,7 @@ wrapper_phage_contigs_sorter_iPlant.pl --fna NoSubSoilT33MC.fa --db 2 --ncpu 1 -
 ```
 
 
-
+#
 ```
 /projects/liupf@colostate.edu/
 

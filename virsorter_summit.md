@@ -88,7 +88,8 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D
 ---->>>
 ## following use high mem, 48 cores, long
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  21G Sep 30 12:22 
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh M3C5D1DdigMC ##waiting
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh M3C5D1DdigMC 
+#Submitted batch job 3231724
 # sbatch: deprecation: long qos is redundant for smem; changing to normal
 
 ##change to use shas

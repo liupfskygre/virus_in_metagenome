@@ -56,6 +56,11 @@ mkdir OWC_contigs_for_virsorter
 ```
 
 ```
+conda activate virsorter
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
 -rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 4.3G Sep 30 12:21 M3C4D3v1MC.fa
 -rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 4.9G Sep 30 12:20 M3C4D3v2MC.fa
 -rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu 5.6G Sep 30 12:19 M3C4D4MC.fa
@@ -74,6 +79,21 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSub
 # 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
 sbatch run_virsorter_summit_24h.sh OwcEnrich2015IDBA 
 -rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  55G Sep 30 12:16 OwcSurfaceSubCoMC.fa
+
+```
+#test
+```
+cd /scratch/summit/liupf@colostate.edu/OWC_contigs_for_virsorter
+conda activate virsorter
+wrapper_phage_contigs_sorter_iPlant.pl --fna NoSubSoilT33MC.fa --db 2 --ncpu 1 --data-dir /scratch/summit/liupf@colostate.edu/scripts/virsorterDB/virsorter-data 
+
+
+```
+
+
+
+```
+/projects/liupf@colostate.edu/
 
 
 ```

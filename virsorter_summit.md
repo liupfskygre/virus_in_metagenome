@@ -79,17 +79,17 @@ VIRSorter_OwcEnrich2015IDBA_scaffold_2,3, ##missing
 VIRSorter_OwcEnrich2015IDBA_scaffold_3-circular-cat_2  ## were cat4 on zenith, e.g.
 
 ###
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v1MC 
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v1MC ##M3C4D3v1MC done, 18hour
 
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v2MC ##done4.9Gb
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v2MC ##done 4.9Gb
 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D4MC ##done, 5.6Gb, 14 hours
 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilTF1MC #done,
 
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D3MC
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D3MC ##5.3G  
 
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa ##5.3G
 
 ---->>>
 ## following use high mem, 48 cores, long
@@ -165,6 +165,6 @@ source activate vs_105 #inside slurm
            3231857      shas mapping_ liupf@co  R   14:59:08      1 shas0440
 
 more /projects/liupf@colostate.edu/slurm_logs/*3231706*
-
+3231697
 scancel
 ```

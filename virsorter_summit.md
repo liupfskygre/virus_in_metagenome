@@ -77,7 +77,7 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D
 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v2MC
 
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D4MC
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D4MC ##done, 5.6Gb, 14 hours
 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilTF1MC
 

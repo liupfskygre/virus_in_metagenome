@@ -90,7 +90,7 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSub
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D3MC ##5.3G  
 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa ##5.3G
-
+##O3C3D3MC and O3C3D4MC, the same??
 ---->>>
 ## following use high mem, 48 cores, long
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  21G Sep 30 12:22 

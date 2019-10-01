@@ -91,6 +91,7 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D
 
 #re-check the naming process
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa ## re-run on the right (O3C3D4MC.fa, 4.9 G)
+Submitted batch job 3234012
 
 ---->>>
 ## following use high mem, 48 cores, long
@@ -153,19 +154,15 @@ source activate vs_105 #inside slurm
 #
 ```
 (base) [liupf@colostate.edu@shas0136 OWC_contigs_for_virsorter]$ squeue |grep liupf
-         
-           3231878      smem virsorte liupf@co PD       0:00      1 (Priority)
+ 3231878      smem virsorte liupf@co PD       0:00      1 (Priority)
            3231882      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231705      shas virsorte liupf@co  R   16:08:11      1 shas0341
-           3231704      shas virsorte liupf@co  R   16:09:19      1 shas0550
-           3231724      shas virsorte liupf@co  R   15:54:19      1 shas0549
-           3231694      shas virsorte liupf@co  R   16:16:37      1 shas0513
-           3231701      shas mapping_ liupf@co  R   15:18:54      1 shas0156
-           3231698      shas mapping_ liupf@co  R   15:44:52      1 shas0231
-           3231697      shas mapping_ liupf@co  R   15:48:46      1 shas0608
-           3231857      shas mapping_ liupf@co  R   14:59:08      1 shas0440
+           3231705      shas virsorte liupf@co  R   20:41:56      1 shas0341
+           3231704      shas virsorte liupf@co  R   20:43:04      1 shas0550
+           3231724      shas virsorte liupf@co  R   20:28:04      1 shas0549
+           3231694      shas virsorte liupf@co  R   20:50:22      1 shas0513
+           3231701      shas mapping_ liupf@co  R   19:52:39      1 shas0156
 
-more /projects/liupf@colostate.edu/slurm_logs/*3231706*
+more /projects/liupf@colostate.edu/slurm_logs/*3231701*
 3231697
 scancel
 ```

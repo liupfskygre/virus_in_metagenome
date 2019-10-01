@@ -90,8 +90,8 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSub
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D3MC ##5.3G  
 
 #re-check the naming process
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC.fa ## re-run on the right (O3C3D4MC.fa, 4.9 G)
-Submitted batch job 3234012
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh O3C3D4MC ## re-run on the right (O3C3D4MC.fa, 4.9 G)
+Submitted batch job 3234016
 
 ---->>>
 ## following use high mem, 48 cores, long

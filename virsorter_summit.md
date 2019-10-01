@@ -67,8 +67,8 @@ use source activate vs_105 inside slurm
 cd /scratch/summit/liupf@colostate.edu/OWC_contigs_for_virsorter
 
 #485M Sep 30 12:09 NoSubSoilT33MC.fa
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC ##
-# no results??? dir of data is not right
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSubSoilT33MC ##done
+#done
 
 $# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh OwcEnrich2015IDBA  ##
@@ -107,11 +107,18 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh O
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  18G Sep 30 12:30 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh O3C3D4DdigMC
 
+???
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  38G Sep 30 12:12 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh OwcDeepSubCoMC
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcDeepSubCoMC
+Submitted batch job 3231882
 
+???
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  55G Sep 30 12:16  
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh OwcSurfaceSubCoMC
+
+try sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcSurfaceSubCoMC
+Submitted batch job 3231878
 
 ```
 #test
@@ -137,18 +144,19 @@ source activate vs_105 #inside slurm
 (base) [liupf@colostate.edu@shas0136 OWC_contigs_for_virsorter]$ squeue |grep liupf
            3231704      shas virsorte liupf@co PD       0:00      1 (Priority)
            3231705      shas virsorte liupf@co PD       0:00      1 (Priority)
-           3231706      shas virsorte liupf@co PD       0:00      1 (Priority)
-           3231707      shas virsorte liupf@co PD       0:00      1 (Priority)
-           3231682      smem virsorte liupf@co PD       0:00      1 (Priority)
-           3231700      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231699      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231698      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231697      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231701      shas mapping_ liupf@co PD       0:00      1 (Priority)
-           3231702      shas mapping_ liupf@co PD       0:00      1 (Priority)
            3231694      shas virsorte liupf@co  R       2:04      1 shas0513
-           3231664      shas mapping_ liupf@co  R       9:34      1 shas0109
-           3231650      shas mapping_ liupf@co  R      21:39      1 shas0664
+              
+             3231724      shas virsorte liupf@co  R    1:00:05      1 shas0549
+             
+           3231701      shas mapping_ liupf@co  R      24:40      1 shas0156
+           3231700      shas mapping_ liupf@co  R      30:25      1 shas0820
+           3231699      shas mapping_ liupf@co  R      41:26      1 shas0826
+           3231698      shas mapping_ liupf@co  R      50:38      1 shas0231
+           3231697      shas mapping_ liupf@co  R      54:32      1 shas0608
+           3231857      shas mapping_ liupf@co  R       4:54      1 shas0440
+           3231664      shas mapping_ liupf@co  R    1:29:53      1 shas0109
+           3231650 done 
+more /projects/liupf@colostate.edu/slurm_logs/*3231706*
 
 scancel
 ```

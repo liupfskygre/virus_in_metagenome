@@ -275,7 +275,7 @@ sed -e 's/>\(scaffold.*\)/>O3C3D3MC_\1/1' O3C3D3_scaffolds.fasta  > O3C3D3MC.fa
 cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
 head O3C3D4_scaffolds.fasta
 
-sed -e 's/>\(scaffold.*\)/>O3C3D4MC_\1/1' O3C3D3_scaffolds.fasta  > O3C3D4MC.fa
+sed -e 's/>\(scaffold.*\)/>O3C3D4MC_\1/1' O3C3D4_scaffolds.fasta  > O3C3D4MC.fa
 
 
 ```

@@ -72,10 +72,13 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh NoSub
 
 $# 990M Sep 30 12:09 OwcEnrich2015IDBA.fa
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh OwcEnrich2015IDBA  ##done,
+
 ## compared with zenith, two scaffold were not found on summit
-VIRSorter_OwcEnrich2015IDBA_scaffold_527,2,
+VIRSorter_OwcEnrich2015IDBA_scaffold_527,2, ## missing
+VIRSorter_OwcEnrich2015IDBA_scaffold_2,3, ##missing
+VIRSorter_OwcEnrich2015IDBA_scaffold_3-circular-cat_2  ## were cat4 on zenith, e.g.
 
-
+###
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v1MC 
 
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh M3C4D3v2MC ##done4.9Gb
@@ -139,6 +142,10 @@ source activate vs_105 #inside slurm
 
 #2, install by miniconda directly instead of github help page, 
 
+
+#3, the VIRSorter_global-phage-signal.csv is not consistent with the cat of fasta files header
+
+#4, zenith, cyverse, summit are slightly different on the classification and
 ```
 
 

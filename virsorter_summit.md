@@ -166,3 +166,29 @@ more /projects/liupf@colostate.edu/slurm_logs/*3231701*
 3231697
 scancel
 ```
+
+##put 6 samples from OWC_metaG16 on summit; 2nd, Oct, 2018
+```
+-rwxr-x---.  1 liupf@colostate.edu liupfgrp@colostate.edu 6.5G Oct  2 10:11 AugOW2C1D5MC.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh AugOW2C1D5MC
+Submitted batch job 3236826
+-rwxr-x---.  1 liupf@colostate.edu liupfgrp@colostate.edu 5.7G Oct  2 10:12 AugT1C1D1MC.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh AugT1C1D1MC
+Submitted batch job 3236827
+
+-rwxr-x---.  1 liupf@colostate.edu liupfgrp@colostate.edu 5.0G Oct  2 10:13 AugT1C1D5MC.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh AugT1C1D5MC
+Submitted batch job 3236831
+
+-rwxr-x---.  1 liupf@colostate.edu liupfgrp@colostate.edu 4.4G Oct  2 10:13 MayM1C1D1MC.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh MayM1C1D1MC
+Submitted batch job 3236832
+
+-rwxr-x---.  1 liupf@colostate.edu liupfgrp@colostate.edu 1.9G Oct  2 10:14 MayM1C1D3MC.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh MayM1C1D3MC
+
+-rwxr-x---.  1 liupf@colostate.edu liupfgrp@colostate.edu 5.0G Oct  2 10:14 MayM1C1D6MC.fa
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh MayM1C1D6MC
+Submitted batch job 3236834
+
+```

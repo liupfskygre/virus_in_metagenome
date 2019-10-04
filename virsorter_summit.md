@@ -117,15 +117,15 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh O
 
 ???
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  38G Sep 30 12:12 
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh OwcDeepSubCoMC
+#sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh OwcDeepSubCoMC
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcDeepSubCoMC
-Submitted batch job 3231882
+Submitted batch job 3245423
 
 ???
 #-rwxr-x---. 1 liupf@colostate.edu liupfgrp@colostate.edu  55G Sep 30 12:16  
-sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh OwcSurfaceSubCoMC
+#sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh OwcSurfaceSubCoMC
 
-try sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcSurfaceSubCoMC
+sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d.sh OwcSurfaceSubCoMC
 Submitted batch job 3231878
 
 ```
@@ -162,8 +162,11 @@ source activate vs_105 #inside slurm
            3231694      shas virsorte liupf@co  R   20:50:22      1 shas0513
            3231701      shas mapping_ liupf@co  R   19:52:39      1 shas0156
 
-more /projects/liupf@colostate.edu/slurm_logs/*3231701*
+more /projects/liupf@colostate.edu/slurm_logs/*3231705*
 3231697
+
+3231882
+
 scancel
 ```
 

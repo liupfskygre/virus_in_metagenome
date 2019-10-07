@@ -37,6 +37,45 @@ done
 
 
 ```
+
+## finished on zenith for metaG16,7-OCt-2019
 ```
-source /opt/Miniconda2/miniconda2/bin/deactivate
+conda /opt/Miniconda2/miniconda2/bin/deactivate
+
+```
+**remember to clean the renamed contigs file
+
+
+## collect all virsorter output
+```
+cd /home/projects/Wetlands/OWC_viral_from_metaG
+/home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith
+
+cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit
+
+for line in $(cat OWC2018_16contigs_path.txt)
+do
+cd $line
+fa=$(ls *MC.fa)
+#mkdir /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/"${fa%.*}"_virsorter-out
+cp -a ./virsorter-out/. /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/"${fa%.*}"_virsorter-out/
+#cp virsorter-out /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/"${fa%.*}"_virsorter-out
+done
+
+du -sh -- *
+
+#del the file within each assembly
+#mv renamed fa to virsorter collections
+
+cd /home/projects/Wetlands/2018_sampling/OWC_metaG_megahit
+
+for line in $(cat OWC2018_16contigs_path.txt)
+do
+cd $line
+fa=$(ls *MC.fa)
+echo "${fa}"
+mv ${fa} /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/
+rm -r virsorter-out
+done
+
 ```

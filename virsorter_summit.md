@@ -32,7 +32,7 @@ $ /opt/globusconnectpersonal-2.3.6/globusconnectpersonal -stop
 
 ```
 
-#data on zenith, WOC_2018_metaG16 were running on zenith
+#data on zenith, OWC_2018_metaG16 were running on zenith
 ```
 /home/projects/Wetlands/2018_sampling/methyl_enrichment2018_metaG/NoSub_Soil_TF_1/NoSub_Soil_TF_1_megahit
 /home/projects/Wetlands/2018_sampling/methyl_enrichment2018_metaG/NoSub_Soil_T3_3/NoSub_Soil_T3_3_megahit
@@ -193,5 +193,16 @@ sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_24h.sh MayM1
 -rwxr-x---.  1 liupf@colostate.edu liupfgrp@colostate.edu 5.0G Oct  2 10:14 MayM1C1D6MC.fa
 sbatch /projects/liupf@colostate.edu/workspace/run_virsorter_summit_7d_shas.sh MayM1C1D6MC
 Submitted batch job 3236834
+
+```
+
+
+## copy genomes from summit to zenit
+```
+#two is still running
+
+cd /home/projects/Wetlands/OWC_viral_from_metaG
+
+cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit
 
 ```

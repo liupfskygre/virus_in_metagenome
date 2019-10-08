@@ -79,3 +79,20 @@ rm -r virsorter-out
 done
 
 ```
+
+## two biggest one 
+```
+screen -S virsorter_co_megahit_Deep
+source /opt/Miniconda2/miniconda2/bin/activate   virsorter
+
+#OwcDeepSubCoMC.fa
+/home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Deep
+wrapper_phage_contigs_sorter_iPlant.pl --fna OwcDeepSubCoMC.fa --db 2 --ncpu 12 --data-dir /opt/virsorter-data
+
+#waiting
+#OwcSurfaceSubCoMC.fa
+/home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Surface
+
+#wrapper_phage_contigs_sorter_iPlant.pl --fna OwcSurfaceSubCoMC.fa --db 2 --ncpu 12 --data-dir /opt/virsorter-data
+
+```

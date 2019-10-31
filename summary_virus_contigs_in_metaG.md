@@ -179,5 +179,41 @@ cat *cat-4_stats_hits.txt >VIRSorter_zenith_lenght_summary_cat-4.txt
 cat *cat-5_stats_hits.txt >VIRSorter_zenith_lenght_summary_cat-5.txt
 
 #13240 VIRSorter_zenith_lenght_summary.txt
+```
+##OwcDeepSubCoMC
+##
+```
+cd /home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_subtractive_megahit_coassembly_virsorter_OUT
+OwcDeepSubCoMC_
+#
+for file in OwcDeepSubCoMC
+do 
+contig_stats.pl -i "${file}"_VIRSorter_cat-1.fasta -o "${file}"_VIRSorter_cat-1_stats -min_length 1
+contig_stats.pl -i "${file}"_VIRSorter_cat-2.fasta -o "${file}"_VIRSorter_cat-2_stats -min_length 1
+contig_stats.pl -i "${file}"_VIRSorter_prophages_cat-4.fasta -o "${file}"_VIRSorter_prophages_cat-4_stats -min_length 1
+contig_stats.pl -i "${file}"_VIRSorter_prophages_cat-5.fasta -o "${file}"_VIRSorter_prophages_cat-5_stats -min_length 1
+done
+
+ls -alhS *.fasta|wc -l
+#48
+#8 have 0 hits
+
+for file in OwcDeepSubCoMC
+do 
+grep 'VIRSorter' "${file}"_VIRSorter_cat-1_stats.summary.txt > "${file}"_VIRSorter_cat-1_stats_hits.txt
+grep 'VIRSorter' "${file}"_VIRSorter_cat-2_stats.summary.txt > "${file}"_VIRSorter_cat-2_stats_hits.txt
+grep 'VIRSorter' "${file}"_VIRSorter_prophages_cat-4_stats.summary.txt > "${file}"_VIRSorter_prophages_cat-4_stats_hits.txt
+grep 'VIRSorter' "${file}"_VIRSorter_prophages_cat-5_stats.summary.txt > "${file}"_VIRSorter_prophages_cat-5_stats_hits.txt
+done
+
+cat *_stats_hits.txt > VIRSorter_OwcDeepSubCoMC_lenght_summary.txt
+
+cat *cat-1_stats_hits.txt >VIRSorter_OwcDeepSubCoMC_lenght_summary_cat-1.txt
+cat *cat-2_stats_hits.txt >VIRSorter_OwcDeepSubCoMC_lenght_summary_cat-2.txt
+cat *cat-4_stats_hits.txt >VIRSorter_OwcDeepSubCoMC_lenght_summary_cat-4.txt
+cat *cat-5_stats_hits.txt >VIRSorter_OwcDeepSubCoMC_lenght_summary_cat-5.txt
+
+#grep -c 'VIRSorter' VIRSorter_OwcDeepSubCoMC_lenght_summary.txt
+# 5238
 
 ```

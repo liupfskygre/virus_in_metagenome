@@ -109,6 +109,8 @@ awk -F ',' '$5==1||$5==2||$5==4||$5==5 {print $0}' OUT_summit_VIRSorter_global-p
 
 cat OUT_summit_VIRSorter_global-phage-signal_hits.txt|wc -l
 #21420
+grep -c 'VIRSorter' VIRSorter_summit_lenght_summary.txt
+21416
 
 
 ##
@@ -153,6 +155,17 @@ cat *cat-1_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-1.txt
 cat *cat-2_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-2.txt
 cat *cat-4_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-4.txt
 cat *cat-5_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-5.txt
+#VIRSorter_summit_lenght_summary.txt
+#21416 VIRSorter_summit_lenght_summary.txt
+
+##summary of numbers
+# cat OUT_summit_VIRSorter_global-phage-signal_hits.txt|wc -l
+#21420
+grep -c 'VIRSorter' VIRSorter_summit_lenght_summary.txt
+21416??
+#from fasta adds up
+#21420
+
 
 ##zenith
 cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/OUT_virsorter_from_zenith

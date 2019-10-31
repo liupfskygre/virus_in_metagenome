@@ -216,4 +216,23 @@ cat *cat-5_stats_hits.txt >VIRSorter_OwcDeepSubCoMC_lenght_summary_cat-5.txt
 #grep -c 'VIRSorter' VIRSorter_OwcDeepSubCoMC_lenght_summary.txt
 # 5238
 
+VIRSorter_OwcDeepSubCoMC_lenght_summary.txt
+
+
+```
+
+
+#transfer to MAC and chage format
+```
+cat VIRSorter_OwcDeepSubCoMC_lenght_summary.txt VIRSorter_summit_lenght_summary.txt VIRSorter_zenith_lenght_summary.txt > VIRSorter_OWC_lenght_summary.txt
+
+sed -i -e 's/[0-9]*\. //1' VIRSorter_OWC_lenght_summary.txt
+sed -i -e 's/-circular//1' VIRSorter_OWC_lenght_summary.txt
+sed -i -e 's/_gene.*-cat/-cat/1' VIRSorter_OWC_lenght_summary.txt
+sed -e 's/_/\t/1' VIRSorter_OWC_lenght_summary.txt >VIRSorter_OWC_lenght_summary_fix.txt
+sed -i -e 's/-/\t/1' VIRSorter_OWC_lenght_summary_fix.txt
+sed -i -e 's/_/\t/1' VIRSorter_OWC_lenght_summary_fix.txt
+
+VIRSorter_MayM1C1D6MC_
+
 ```

@@ -119,3 +119,52 @@ grep -c '>' *cat-4.fasta
 grep -c '>' *cat-5.fasta 
 
 ```
+
+#get the length of each genes 
+```
+#
+cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit/OUT_virsorter_from_summit
+#
+for file in $(cat ../metaG.list)
+do 
+contig_stats.pl -i "${file}"_VIRSorter_cat-1.fasta -o "${file}"_VIRSorter_cat-1_stats -min_length 1
+contig_stats.pl -i "${file}"_VIRSorter_cat-2.fasta -o "${file}"_VIRSorter_cat-2_stats -min_length 1
+contig_stats.pl -i "${file}"_VIRSorter_prophages_cat-4.fasta -o "${file}"_VIRSorter_prophages_cat-4_stats -min_length 1
+contig_stats.pl -i "${file}"_VIRSorter_prophages_cat-5.fasta -o "${file}"_VIRSorter_prophages_cat-5_stats -min_length 1
+done
+
+#sovle devided by 0 
+#contig_stats.pl -i OwcEnrich2015IDBA_VIRSorter_prophages_cat-5.fasta -o OwcEnrich2015IDBA_VIRSorter_prophages_cat-5_stats -min_length 1
+ls -alhS *.fasta|wc -l
+#48
+#8 have 0 hits
+
+for file in $(cat ../metaG.list)
+do 
+grep 'VIRSorter' "${file}"_VIRSorter_cat-1_stats.summary.txt > "${file}"_VIRSorter_cat-1_stats_hits.txt
+grep 'VIRSorter' "${file}"_VIRSorter_cat-2_stats.summary.txt > "${file}"_VIRSorter_cat-2_stats_hits.txt
+grep 'VIRSorter' "${file}"_VIRSorter_prophages_cat-4_stats.summary.txt > "${file}"_VIRSorter_prophages_cat-4_stats_hits.txt
+grep 'VIRSorter' "${file}"_VIRSorter_prophages_cat-5_stats.summary.txt > "${file}"_VIRSorter_prophages_cat-5_stats_hits.txt
+done
+
+cat *_stats_hits.txt > VIRSorter_summit_lenght_summary.txt
+
+cat *cat-1_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-1.txt
+cat *cat-2_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-2.txt
+cat *cat-4_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-4.txt
+cat *cat-5_stats_hits.txt >VIRSorter_summit_lenght_summary_cat-5.txt
+
+##zenith
+cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/OUT_virsorter_from_zenith
+#12 have 0 hits 
+#do contigs.pl as above
+cat *_stats_hits.txt > VIRSorter_zenith_lenght_summary.txt
+
+cat *cat-1_stats_hits.txt >VIRSorter_zenith_lenght_summary_cat-1.txt
+cat *cat-2_stats_hits.txt >VIRSorter_zenith_lenght_summary_cat-2.txt
+cat *cat-4_stats_hits.txt >VIRSorter_zenith_lenght_summary_cat-4.txt
+cat *cat-5_stats_hits.txt >VIRSorter_zenith_lenght_summary_cat-5.txt
+
+#13240 VIRSorter_zenith_lenght_summary.txt
+
+```

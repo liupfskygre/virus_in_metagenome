@@ -117,4 +117,6 @@ source /opt/Miniconda2/miniconda2/bin/activate   virsorter
 
 /home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Surface
 wrapper_phage_contigs_sorter_iPlant.pl --fna OwcSurfaceSubCoMC_10K.fa --db 2 --wdir ./virsorter_co_megahit_Surface_10K --ncpu 24 --data-dir /opt/virsorter-data
+
+#done already
 ```

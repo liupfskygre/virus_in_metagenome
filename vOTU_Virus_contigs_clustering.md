@@ -17,8 +17,28 @@
 #
 ```
 
-#
+#this could be done on zenith
+```
+cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/OWC_virsorter_10K
+
+screen -S cluster_genome
+OWC_virsorter_10K_all.fa
+# Cluster_genomes_5.1.pl -f input.fa -c 80 -i 95 -t 2
+Cluster_genomes_5.1.pl -f OWC_virsorter_10K_all.fa -c 80 -i 95 -t 6
+
+grep -c '>' OWC_virsorter_10K_all_95-80.fna
+4313
+
+```
+#export spacer from genious
+#after this, blastn spacer to vContigs
+```
+# with the vOTU, we could do blastn to search spacer with vContigs
+
 ```
 
+#transfer the vOTU to unity to run virHostMatcher
+```
+0.25 cutoff
 
 ```

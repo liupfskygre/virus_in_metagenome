@@ -251,6 +251,21 @@ done
 mkdir virsorter_10K_zenith
 /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/OUT_virsorter_from_zenith/virsorter_10K_zenith
 
+##two additional co-assembly 
+cd /home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_subtractive_megahit_coassembly_virsorter_OUT
+#pull 10K
+mv *_10K.fasta /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/OUT_virsorter_from_zenith/virsorter_10K_zenith
+
+#surface
+/home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Surface/virsorter_co_megahit_Surface_10K/Predicted_viral_sequences
+
+mv *1_10K.fasta /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/OUT_virsorter_from_zenith/virsorter_10K_zenith
+mv *2_10K.fasta 
+mv *4_10K.fasta 
+mv *5_10K.fasta 
+#
+
+
 #from summit
 cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit/OUT_virsorter_from_summit
 
@@ -261,6 +276,7 @@ pullseq -i ${file} -m 10000 > "${file%.*}"_10K.fasta
 done 
 
 mkdir virsorter_10K_summit
+cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit/OUT_virsorter_from_summit/virsorter_10K_summit
 
 
 
@@ -268,5 +284,8 @@ mkdir virsorter_10K_summit
 #All_genomes
 ```
 #OWC_metaG_virsorter_10K
+cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/OWC_virsorter_10K
 
+#with all 30 metaG, 10K virsorter output here. 
+5769
 ```

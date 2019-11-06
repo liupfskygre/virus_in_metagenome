@@ -236,3 +236,37 @@ sed -i -e 's/_/\t/1' VIRSorter_OWC_lenght_summary_fix.txt
 VIRSorter_MayM1C1D6MC_
 
 ```
+
+
+#virsorter 10K contigs output
+```
+#from zenith
+cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/OUT_virsorter_from_zenith/
+for file in *.fasta
+do 
+pullseq -i ${file} -m 10000 > "${file%.*}"_10K.fasta
+done 
+
+#move to this folder
+mkdir virsorter_10K_zenith
+/home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_zenith/OUT_virsorter_from_zenith/virsorter_10K_zenith
+
+#from summit
+cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit/OUT_virsorter_from_summit
+
+#10K
+for file in *.fasta
+do 
+pullseq -i ${file} -m 10000 > "${file%.*}"_10K.fasta
+done 
+
+mkdir virsorter_10K_summit
+
+
+
+```
+#All_genomes
+```
+#OWC_metaG_virsorter_10K
+
+```

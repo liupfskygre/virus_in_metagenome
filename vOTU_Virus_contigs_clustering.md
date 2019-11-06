@@ -30,7 +30,7 @@ grep -c '>' OWC_virsorter_10K_all_95-80.fna
 4313
 
 ```
-#export spacer from genious
+#export spacer from genious (repeats+spacers==CRISPR units in geneious)
 #after this, blastn spacer to vContigs
 ```
 # with the vOTU, we could do blastn to search spacer with vContigs

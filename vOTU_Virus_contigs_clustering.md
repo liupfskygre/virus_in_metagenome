@@ -37,8 +37,9 @@ grep -c '>' OWC_virsorter_10K_all_95-80.fna
 
 ```
 
-#transfer the vOTU to unity to run virHostMatcher
+#transfer the vOTU and  MGDB89 to unity to run virHostMatcher
 ```
-0.25 cutoff
-
+#0.25 cutoff
+OWC_virsorter_10K_all_95-80.fna 
+#https://github.com/liupfskygre/virus_in_metagenome/edit/master/VirHostMatcher.md
 ```

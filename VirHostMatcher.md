@@ -26,5 +26,8 @@ mv ../../*.fa ./
 /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins
 
 python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v OWC_vOTUs_contigs -b OWC_MGdb89_genomes -o OWC_MGdb89_genomes_vOTUs_match
- 
+
+
+#on zenith, re-run on zenith
+
 ```

@@ -65,6 +65,8 @@ cat OWC_virsorter_10K_all_95-80_header_fixed.txt|sort|uniq > OWC_virsorter_10K_a
 #4306
 
 grep -f OWC_virsorter_10K_all_95-80_header_fixed_uniq.txt VIRSorter_affi-contigs_all30.tab >VIRSorter_affi-contigs_all30_vOTU.tab
+#3xxxx?? 
+# 
 ```
 
 

@@ -76,3 +76,14 @@ grep -f OWC_virsorter_10K_all_95-80_header_fixed_uniq.txt VIRSorter_affi-contigs
 DRAM.py annotate_viral -i OWC_virsorter_10K_all_95-80.fna -v VIRSorter_affi-contigs_all30_vOTU.tab -o OWC_virsorter_10K_all_95_80_dram
 #DRAM.py annotate_viral: error: the following arguments are required: -v/--virsorter_affi_contigs
 ```
+
+```
+error
+    exec(compile(f.read(), __file__, 'exec'))
+  File "/opt/DRAM/scripts/DRAM.py", line 187, in <module>
+    args.func(**args_dict)
+  File "/opt/DRAM/mag_annotator/annotate_vgfs.py", line 267, in annotate_vgfs
+    virsorter_scaffold_name = scaffold[:re.search('_scaffold_\d*[_,-]', scaffold).end() - 1]
+AttributeError: 'NoneType' object has no attribute 'end'
+
+```

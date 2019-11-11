@@ -34,3 +34,21 @@ blastn -query OWC_MGdb_89_spacers196_6bins_fix.fasta -db OWC_virsorter_10K_all_v
 #blast returns no results??
 
 ```
+
+#blast on all 10K virus contigs
+```
+sed -e 's/\(_gene_[0-9].*_gene_[0-9].*\)-.*-.*-cat_[0-9]$/\1/g' OWC_virsorter_10K_all.fa >OWC_virsorter_10K_all_fixed.fa
+#sed -e 's/-/_/g' 
+sed -i -e 's/\-/_/g' OWC_virsorter_10K_all_fixed.fa
+
+sed -i -e 's/_circular/c_/g' OWC_virsorter_10K_all_fixed.fa
+sed -i -e 's/__/_/g' OWC_virsorter_10K_all_fixed.fa
+sed -i -e 's/gene/g/g' OWC_virsorter_10K_all_fixed.fa
+sed -i -e 's/VIRSorter_//g' OWC_virsorter_10K_all_fixed.fa
+
+makeblastdb -in OWC_virsorter_10K_all_fixed.fa -dbtype nucl -parse_seqids -out OWC_virsorter_10K
+
+blastn -query OWC_MGdb_89_spacers196_6bins_fix.fasta -db OWC_virsorter_10K -outfmt 6 -max_target_seqs 5 -evalue 100 -num_threads 4 -out OWC_MGdb_89_spacers196_6bins_blastn_all10K.txt
+
+#zero hits
+```

@@ -31,3 +31,14 @@ python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v OWC_vOTUs_contigs -b 
 #on zenith, re-run on zenith
 
 ```
+
+#since no spacer matches the virus contigs, check the virhostmatcher
+```
+#
+> length(unique(df_long_f$MAGs))
+[1] 63
+> length(unique(df_long_f$d2star))
+[1] 200
+
+63 MAGs had potential host-virus links to 200 virus contigs based on the virHostMatcher
+```

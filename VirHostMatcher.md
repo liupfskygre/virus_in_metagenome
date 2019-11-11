@@ -14,6 +14,11 @@ screen -S awk_split
 awk '/^>VIRSorter/ {OUT=substr($0,2) ".fa"}; OUT {print >OUT}' OWC_virsorter_10K_all_95-80.fna 
 
 #
+
+# do not do this only on methanogens db, do it on all dRepped genomes
+#
+
+
 python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b host -o output
 
 #virus dir :/home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/OWC_vOTUs_contigs

@@ -283,5 +283,10 @@ sed -e 's/>\(scaffold.*\)/>O3C3D4MC_\1/1' O3C3D4_scaffolds.fasta  > O3C3D4MC.fa
 **30
 ```
 Enrichenment_2015_Jordan
+cd /home/projects/Wetlands/2014-2015_sampling/Methanogen_OWC_enrichment_2015/idba_assembled_output
+scaffold.fa
+
+# >scaffold_0 
+sed -e 's/>scaffold_/>OwcEnrich2015IDBA_scaffold_/1' scaffold.fa > OwcEnrich2015IDBA.fa
 
 ```

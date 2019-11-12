@@ -205,7 +205,7 @@ sed -i -e 's/>\(k.*\)/>OwcSurfaceSubCoMC_\1/1' OwcSurfaceSubCoMC.fa  #MC stands 
 
 ```
 ##
-**22, M3C5D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
+**21, M3C5D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
 ```
 cd /home/projects/Wetlands/All_genomes/DDIG_megahit_assemblies
 head M3C5D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa
@@ -214,7 +214,7 @@ sed -i -e 's/>\(k.*\)/>M3C5D1DdigMC_\1/1' M3C5D1DdigMC.fa  #MC stands for Megahi
 
 ```
 
-**23 O3C3D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
+**22 O3C3D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
 ```
 cd /home/projects/Wetlands/All_genomes/DDIG_megahit_assemblies
 head O3C3D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa
@@ -222,7 +222,7 @@ head O3C3D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa
 sed -e 's/>\(k.*\).*flag.*$/>\1/1' O3C3D1_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa >O3C3D1DdigMC.fa
 sed -i -e 's/>\(k.*\)/>O3C3D1DdigMC_\1/1' O3C3D1DdigMC.fa  #MC stands for Megahit_Contigs
 ```
-**24 O3C3D3_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
+**23 O3C3D3_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
 ```
 cd /home/projects/Wetlands/All_genomes/DDIG_megahit_assemblies
 head O3C3D3_DDIG_MN_megahit_k51_k121_s10_assembly.contigs.fa
@@ -231,7 +231,7 @@ sed -e 's/>\(k.*\).*flag.*$/>\1/1' O3C3D3_DDIG_MN_megahit_k51_k121_s10_assembly.
 sed -i -e 's/>\(k.*\)/>O3C3D3DdigMC_\1/1' O3C3D3DdigMC.fa  #MC stands for Megahit_Contigs
 
 ```
-**25 O3C3D4_DDIG_MN_megahit_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
+**24 O3C3D4_DDIG_MN_megahit_assembly.contigs.fa	1	DDIG assembly from Marina, miller Lab**
 ```
 cd /home/projects/Wetlands/All_genomes/DDIG_megahit_assemblies
 head O3C3D4_DDIG_MN_megahit_assembly.contigs.fa
@@ -240,21 +240,21 @@ sed -i -e 's/>\(k.*\)/>O3C3D4DdigMC_\1/1' O3C3D4DdigMC.fa  #MC stands for Megahi
 
 ```
 
-**26 M3C4D3_v1_scaffolds.fasta** 
+**25 M3C4D3_v1_scaffolds.fasta** 
 ```
 cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
 head M3C4D3_v1_scaffolds.fasta
 #sed -e 's/>\(k.*\).*flag.*$/>\1/1' O3C3D4_DDIG_MN_megahit_assembly.contigs.fa >O3C3D4DdigMC.fa
 sed -e 's/>\(scaffold.*\)/>M3C4D3v1MC_\1/1' M3C4D3_v1_scaffolds.fasta > M3C4D3v1MC_.fa
 ```
-**27 M3C4D3_v2_scaffolds.fasta**
+**26 M3C4D3_v2_scaffolds.fasta**
 ```
 cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
 head M3C4D3_v2_scaffolds.fasta 
 
 sed -e 's/>\(scaffold.*\)/>M3C4D3v2MC_\1/1' M3C4D3_v2_scaffolds.fasta  > M3C4D3v2MC.fa
 ```
-**28 M3C4D4_scaffolds.fasta**
+**27 M3C4D4_scaffolds.fasta**
 ```
 cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
 head M3C4D4_scaffolds.fasta 
@@ -262,7 +262,7 @@ head M3C4D4_scaffolds.fasta
 sed -e 's/>\(scaffold.*\)/>M3C4D4MC_\1/1' M3C4D4_scaffolds.fasta  > M3C4D4MC.fa
 
 ```
-**29 O3C3D3_scaffolds.fasta**
+**28 O3C3D3_scaffolds.fasta**
 ```
 
 cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
@@ -270,7 +270,7 @@ head O3C3D3_scaffolds.fasta
 
 sed -e 's/>\(scaffold.*\)/>O3C3D3MC_\1/1' O3C3D3_scaffolds.fasta  > O3C3D3MC.fa
 ```
-**30 O3C3D4_scaffolds.fasta
+**29 O3C3D4_scaffolds.fasta
 ```
 cd /home/projects/Wetlands/All_genomes/miller_lab_JGI_CSP_assemblies
 head O3C3D4_scaffolds.fasta
@@ -280,7 +280,7 @@ sed -e 's/>\(scaffold.*\)/>O3C3D4MC_\1/1' O3C3D4_scaffolds.fasta  > O3C3D4MC.fa
 
 ```
 
-**31 
+**30
 ```
 Enrichenment_2015_Jordan
 

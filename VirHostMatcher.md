@@ -43,10 +43,47 @@ cd /home/projects/Wetlands/All_genomes/OWC_MAGs_dRep_19Sept19/OWC_MAGs_19Sept19_
 #Two_w_mcrA_methanoG.list (from MGdb to MG3211 db)
 
 #5 mismatch between all dRep with Methanogens only dRep (After adding 9 methanogen genomes, we have 3211+9 host to search)
+```
+
+#on unity, 
+```
+cd /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/host
+touch Two_w_mcrA_methanoG.list
+touch Anovio_cleaned_duplicated_remove.list
+touch Anvio_cleaned_additional.list
+#
+cd /home/pengfei.2/OWC_dRep_3211_MAGs
+#
+cp /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/host/*Anvio*.fa ./
+
+#
+for file in  $(cat Two_w_mcrA_methanoG.list)
+do 
+cp ${file}.fa /home/pengfei.2/OWC_dRep_3211_MAGs
+done 
+
+#
+cd /home/pengfei.2/OWC_dRep_3211_MAGs
+for file in  $(cat /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/host/Anovio_cleaned_duplicated_remove.list)
+do 
+mv ${file}.fa /home/pengfei.2/
+done
+#mv O3C3D3_DDIG_MN_Anvio.967..fa O3C3D3_DDIG_MN_Anvio.967.fa
+#
+
+#creat work dir
+cd ~
+mkdir virHostMatcher_vOTU_3220MAGs
+mv OWC_dRep_3211_MAGs virHostMatcher_vOTU_3220MAGs
+cd virHostMatcher_vOTU_3220MAGs
+mv OWC_dRep_3211_MAGs/ host
+
+mv /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/virus ./
+
+#4314 genomes
 
 
-/home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/OWC_MGdb89_genomes 
-python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b host -o output
+#python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b host -o output
 
 cd /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/OWC_vOTUs_contigs
 mv ../../*.fa ./

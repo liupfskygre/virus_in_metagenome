@@ -29,7 +29,7 @@ OWC_virsorter_10K_all.fa
 Cluster_genomes_5.1.pl -f OWC_virsorter_10K_all.fa -c 80 -i 95 -t 6
 
 grep -c '>' OWC_virsorter_10K_all_95-80.fna
-#4313
+#4313 ==>4436 #update 13-Nov-2019
 
 ```
 #export spacer from genious (repeats+spacers==CRISPR units in geneious)

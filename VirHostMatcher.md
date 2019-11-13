@@ -89,8 +89,8 @@ mv ../../*.fa ./
 
 #update 14-2019
 ```
-#qsub scripts
-
+#qsub scripts, only generate d2star metric
+///
 #PBS -l walltime=300:00:00
 #PBS -l nodes=1:ppn=10,mem=40GB
 #PBS -N VirHostMatcher
@@ -107,10 +107,13 @@ python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b /home/pengfe
 #OWC_vOTUs_contigs -b OWC_MGdb89_genomes -o OWC_MGdb89_genomes_vOTUs_match
 
 #qsub virHostMatcher.pbs
-
+////
 #grep -c '>' OWC_virsorter_10K_all_95-80.fna ;
 # 4436 #update 14-Nov-2019
 # but only 4410 virus genomes generate to match 3220 MAGs
+
+#qstat 1425822
+
 ```
 
 

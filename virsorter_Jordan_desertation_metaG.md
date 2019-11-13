@@ -69,9 +69,37 @@ wrapper_phage_contigs_sorter_iPlant.pl --wdir "${file%.*}" --fna ${file} --db 2 
 done
 ```
 
+#collect cat1, 2, 4, and 5
+```
+for file in *.fa
+do
+cd "${file%.*}"/Predicted_viral_sequences/
+echo "${file%.*}"
+cat *_cat-1.fasta *_cat-2.fasta *_prophages_cat-4.fasta *_prophages_cat-5.fasta >> ../../OWC2014_virus_scaffold10K.fasta
+#grep -c '>' *_cat-1.fasta *_cat-2.fasta *_prophages_cat-4.fasta *_prophages_cat-5.fasta 
+cd ../../
+done 
+#336 sequences
+```
+#
+for file in *.fa
+do
+cd "${file%.*}"/Predicted_viral_sequences/
+echo "${file%.*}"
+grep -c '>' *_cat-1.fasta *_cat-2.fasta *_prophages_cat-4.fasta *_prophages_cat-5.fasta 
+cd ../../
+done 
+
+
 #add data to virsort_all_10K
 ```
 https://github.com/liupfskygre/virus_in_metagenome/blob/master/vOTU_Virus_contigs_clustering.md
 
+cat /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/Virus_metaG2014_15/OWC2014_virus_scaffold10K.fasta >>/home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/OWC_virsorter_10K/OWC_virsorter_10K_all.fa
+
+#update 13-Nov-2019
+#5769 +336 ==6105
 ```
+
+#
 

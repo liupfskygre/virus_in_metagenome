@@ -16,7 +16,7 @@ awk '/^>VIRSorter/ {OUT=substr($0,2) ".fa"}; OUT {print >OUT}' OWC_virsorter_10K
 #
 ```
 ## do not do this only on methanogens db, do it on all dRepped genomes
-#
+# update 13-Nov-2019
 ```
 
 python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b host -o output
@@ -77,9 +77,7 @@ mkdir virHostMatcher_vOTU_3220MAGs
 mv OWC_dRep_3211_MAGs virHostMatcher_vOTU_3220MAGs
 cd virHostMatcher_vOTU_3220MAGs
 mv OWC_dRep_3211_MAGs/ host
-
 mv /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/virus ./
-
 #4314 genomes
 
 
@@ -87,18 +85,40 @@ mv /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/virus ./
 
 cd /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/OWC_vOTUs_contigs
 mv ../../*.fa ./
-
-
-
 ```
+
+#update 14-2019
+```
+#qsub scripts
+
+#PBS -l walltime=300:00:00
+#PBS -l nodes=1:ppn=10,mem=40GB
+#PBS -N VirHostMatcher
+#PBS -m abe
+#PBS -M liupf@colostate.edu
+
+module use /fs/project/wrighton.1/scripts/modulefiles #W2 environment
+module load load_scripts #W2 environment
+
+cd /home/pengfei.2/virHostMatcher_vOTU4436_MAGs3220
+
+python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b /home/pengfei.2/virHostMatcher_vOTU_3220MAGs/host -o output -d 1
+
+#OWC_vOTUs_contigs -b OWC_MGdb89_genomes -o OWC_MGdb89_genomes_vOTUs_match
+
+#qsub virHostMatcher.pbs
+
+#grep -c '>' OWC_virsorter_10K_all_95-80.fna ;
+# 4436 #update 14-Nov-2019
+# but only 4410 virus genomes generate to match 3220 MAGs
+```
+
+
+
+
 
 #since no spacer matches the virus contigs, check the virhostmatcher
 ```
 #
-> length(unique(df_long_f$MAGs))
-[1] 63
-> length(unique(df_long_f$d2star))
-[1] 200
 
-63 MAGs had potential host-virus links to 200 virus contigs based on the virHostMatcher
 ```

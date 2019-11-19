@@ -52,3 +52,12 @@ blastn -query OWC_MGdb_89_spacers196_6bins_fix.fasta -db OWC_virsorter_10K -outf
 
 #zero hits
 ```
+
+#another two tries
+## 1, with all non-dRep medium quality methanogens MAGs, detected the CRISPR spacer, then blastn to all virus contigs (before clustering)
+
+
+## 2, use CRISPR from dRep MAGs to blastn all virus contigs (the way above also covered this)
+
+
+

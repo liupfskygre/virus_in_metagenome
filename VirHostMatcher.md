@@ -85,6 +85,8 @@ mv /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/virus ./
 
 cd /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/OWC_vOTUs_contigs
 mv ../../*.fa ./
+
+# this part is not finished due to limited wall time
 ```
 
 #update 14-2019
@@ -113,7 +115,7 @@ python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b /home/pengfe
 # but only 4410 virus genomes generate to match 3220 MAGs
 
 #qstat 1425822
-
+# done
 ```
 
 

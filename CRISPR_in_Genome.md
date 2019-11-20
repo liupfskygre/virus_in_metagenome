@@ -68,7 +68,8 @@ done
 #
 
 #use Geneious on 178 Medium-High qua genomes
-
+#398 spacer were found in 178 genomes
+# blastn to all virus contigs
 ```
 
 ## 2, use CRISPR from dRep MAGs to blastn all virus contigs (the way above also covered this)

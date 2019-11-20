@@ -56,10 +56,18 @@ blastn -query OWC_MGdb_89_spacers196_6bins_fix.fasta -db OWC_virsorter_10K -outf
 #another two tries
 ## 1, with all non-dRep medium quality methanogens MAGs, detected the CRISPR spacer, then blastn to all virus contigs (before clustering)
 ```
-# transfer 177 medium-high qua genomes to Mac
-cd /Users/pengfeiliu/A_Wrighton_lab/Wetland_project/OWC_metaG_2014_2018/OWC_wetland_methanogens_database/MG_medium_quality177
+# transfer 186 medium-high qua MAGs genomes from zenith to Mac
+cd /Users/pengfeiliu/A_Wrighton_lab/Wetland_project/OWC_metaG_2014_2018/OWC_wetland_methanogens_database/MG_medium_quality178
 
-#use 
+
+#remove 8 Asgard genomes, but kept O3C3D4_DDIG_MN.839 (With mcrA as 474)
+for file in Aug_M1C1D5_MC3a.78 O3C3D3_DDIG_MN.671 O3C3D3_DDIG_MN.740 O3C3D3_idba.40 O3C3D3_metabat_w_DDIG_2.5k.282 O3C3D4_DDIG_metabat.312 O3C3D4_DDIG_metabat.602 O3D3D3_DDIG_megahit.356
+do
+rm ${file}.fa
+done
+#
+
+#use Geneious on 178 Medium-High qua genomes
 
 ```
 

@@ -69,7 +69,30 @@ done
 
 #use Geneious on 178 Medium-High qua genomes
 #398 spacer were found in 178 genomes
-# blastn to all virus contigs
+# blastn to all virus contigs, 6105
+sed -e 's/\(_gene_[0-9].*_gene_[0-9].*\)-.*-.*-cat_[0-9]$/\1/g' OWC_virsorter_10K_all.fa >OWC_virsorter_10K_all_fixed.fa
+#sed -e 's/-/_/g' 
+sed -i -e 's/\-/_/g' OWC_virsorter_10K_all_fixed.fa
+
+sed -i -e 's/_circular/c_/g' OWC_virsorter_10K_all_fixed.fa
+sed -i -e 's/__/_/g' OWC_virsorter_10K_all_fixed.fa
+sed -i -e 's/gene/g/g' OWC_virsorter_10K_all_fixed.fa
+sed -i -e 's/VIRSorter_//g' OWC_virsorter_10K_all_fixed.fa
+
+awk '/^[>;]/ { if (seq) { print seq }; seq=""; print } /^[^>;]/ { seq = seq $0 } END { print seq }' OWC_virsorter_10K_all_fixed.fa > OWC_virsorter_10K_all_fixed_lin.fa
+
+#fastx_collapser -i OWC_virsorter_10K_all_fixed_lin.fa -o OWC_virsorter_10K_all_fixed_col.fa
+#remove duplicate seqs, bbmap tools
+dedupe.sh in=OWC_virsorter_10K_all_fixed_lin.fa out=OWC_virsorter_10K_all_fixed_col.fa
+#5758
+makeblastdb -in OWC_virsorter_10K_all_fixed_col.fa -dbtype nucl -parse_seqids -out OWC_virsorter_10K
+
+
+sed -e 's/_-_CRISPR_[0-9];_//g' Spacer398annotations.fasta > Spacer398annotations_fixed.fasta
+
+blastn -query Spacer398annotations_fixed.fasta -db OWC_virsorter_10K -outfmt 6 -max_target_seqs 5 -evalue 100 -num_threads 4 -out Spacer398annotations_fixed_blastn_all10K.txt
+
+#still zero hits. 
 ```
 
 ## 2, use CRISPR from dRep MAGs to blastn all virus contigs (the way above also covered this)

@@ -55,7 +55,13 @@ blastn -query OWC_MGdb_89_spacers196_6bins_fix.fasta -db OWC_virsorter_10K -outf
 
 #another two tries
 ## 1, with all non-dRep medium quality methanogens MAGs, detected the CRISPR spacer, then blastn to all virus contigs (before clustering)
+```
+# transfer 177 medium-high qua genomes to Mac
+cd /Users/pengfeiliu/A_Wrighton_lab/Wetland_project/OWC_metaG_2014_2018/OWC_wetland_methanogens_database/MG_medium_quality177
 
+#use 
+
+```
 
 ## 2, use CRISPR from dRep MAGs to blastn all virus contigs (the way above also covered this)
 

@@ -25,11 +25,15 @@ prodigal -i OWC_virsorter_10K_all_95-80.fna -a OWC_virsorter_10K_all_vOTU_protei
 2. vConTACT2_0.9.5 or vConTACT2_0.9.8
 # https://de.cyverse.org/de/
 
-1> vContact2-Gene2Genome_1.1.0_analysis1: 
+1> vContact2-Gene2Genome_1.1.0_analysis1: generate the file for vConTACT2
 #para, Prodigal amino acid proteins
 
 2>vConTACT2_0.9.8 (21-Nov-19, newest one on cyverse)
 #Gene-to-Genome mapping file. MUST BE PROVIDED if using raw proteins or BLASTP/Diamond. from last step
 # para: defaults
 
+#output of
+genome_by_genome_overview
+
+#check the clustering
 ```

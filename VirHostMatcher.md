@@ -89,7 +89,7 @@ mv ../../*.fa ./
 # this part is not finished due to limited wall time
 ```
 
-#update 14-2019
+#update 14-Nov-2019
 ```
 #qsub scripts, only generate d2star metric
 ///

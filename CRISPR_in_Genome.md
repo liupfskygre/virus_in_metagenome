@@ -82,7 +82,11 @@ sed -i -e 's/VIRSorter_//g' OWC_virsorter_10K_all_fixed.fa
 awk '/^[>;]/ { if (seq) { print seq }; seq=""; print } /^[^>;]/ { seq = seq $0 } END { print seq }' OWC_virsorter_10K_all_fixed.fa > OWC_virsorter_10K_all_fixed_lin.fa
 
 #fastx_collapser -i OWC_virsorter_10K_all_fixed_lin.fa -o OWC_virsorter_10K_all_fixed_col.fa
-#remove duplicate seqs, bbmap tools
+
+
+#remove duplicate seqs, bbmap tools, keep only on seqs for all duplicates
+#Exact duplicate and contained sequence removal:
+
 dedupe.sh in=OWC_virsorter_10K_all_fixed_lin.fa out=OWC_virsorter_10K_all_fixed_col.fa
 #5758
 makeblastdb -in OWC_virsorter_10K_all_fixed_col.fa -dbtype nucl -parse_seqids -out OWC_virsorter_10K

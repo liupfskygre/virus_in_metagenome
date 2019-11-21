@@ -30,6 +30,7 @@ prodigal -i OWC_virsorter_10K_all_95-80.fna -a OWC_virsorter_10K_all_vOTU_protei
 
 2>vConTACT2_0.9.8 (21-Nov-19, newest one on cyverse)
 #Gene-to-Genome mapping file. MUST BE PROVIDED if using raw proteins or BLASTP/Diamond. from last step
+#protein.csv
 # para: defaults
 
 #output of

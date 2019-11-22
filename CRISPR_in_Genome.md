@@ -79,7 +79,11 @@ sed -i -e 's/__/_/g' OWC_virsorter_10K_all_fixed.fa
 sed -i -e 's/gene/g/g' OWC_virsorter_10K_all_fixed.fa
 sed -i -e 's/VIRSorter_//g' OWC_virsorter_10K_all_fixed.fa
 
-awk '/^[>;]/ { if (seq) { print seq }; seq=""; print } /^[^>;]/ { seq = seq $0 } END { print seq }' OWC_virsorter_10K_all_fixed.fa > OWC_virsorter_10K_all_fixed_lin.fa
+#all >10K virus contigs
+# /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/OWC_virsorter_10K/OWC_virsorter_10K_all.fa
+
+#linear seqs: OWC_virsorter_10K_all_fixed_lin.fa
+$ awk '/^[>;]/ { if (seq) { print seq }; seq=""; print } /^[^>;]/ { seq = seq $0 } END { print seq }' OWC_virsorter_10K_all_fixed.fa > OWC_virsorter_10K_all_fixed_lin.fa
 
 #fastx_collapser -i OWC_virsorter_10K_all_fixed_lin.fa -o OWC_virsorter_10K_all_fixed_col.fa
 

@@ -113,11 +113,18 @@ python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b /home/pengfe
 #grep -c '>' OWC_virsorter_10K_all_95-80.fna ;
 # 4436 #update 14-Nov-2019
 # but only 4410 virus genomes generate to match 3220 MAGs
+#reasson for this: 4410 uniq names; 
+
 
 #qstat 1425822
 # done
 ```
 
+#update on 23-Nov-2019
+```
+# Cluster_genomes_5.1.pl 
+# after clustering, 26 duplicates sequences still exists???
+```
 
 
 

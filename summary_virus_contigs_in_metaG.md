@@ -289,3 +289,22 @@ cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/OWC_virsorter_10K
 #with all 30 metaG, 10K virsorter output here. 
 5769
 ```
+
+#adding  virus from Jordan 2014-2015 desertation
+```
+https://github.com/liupfskygre/virus_in_metagenome/blob/master/virsorter_Jordan_desertation_metaG.md
+
+cat /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/Virus_metaG2014_15/OWC2014_virus_scaffold10K.fasta >>/home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/OWC_virsorter_10K/OWC_virsorter_10K_all.fa
+
+#update 13-Nov-2019
+#5769 +336 ==6105
+OWC_virsorter_10K_all.fa 
+
+#
+#move to generate vOTU by 95-80 cutoff by Cluster_genomes_5.1.pl, 
+
+#then vConTACT2_0.9.8 on vOTU to generate vOTU clusters
+```
+
+
+

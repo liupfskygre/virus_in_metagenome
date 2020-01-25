@@ -207,3 +207,10 @@ cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit
 
 ```
 
+## data used from summit
+```
+#since some dataset being running on both summit and zenith, this is a list generate from summit
+#metaG_running_on_summit.list #12 samples
+
+
+```

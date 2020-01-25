@@ -20,28 +20,39 @@ cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/Virus_metaG2014_15
 #data-preparation
 ```
 #1 Mud_August_scaffold.fa
-pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Aug_Mud_Surface/Mud_August_scaffold.fa -m 10000 > ./MudAugSca10K.fa
+pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Aug_Mud_Surface/Mud_August_scaffold.fa -m 10000 > ./MudAugSca10K.fa #(checked)
+
+
 #2 OPEN_August_scaffold.fa
-pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Aug_Open_Surface/OPEN_August_scaffold.fa -m 10000 > ./OpenAugSca10K.fa
+pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Aug_Open_Surface/OPEN_August_scaffold.fa -m 10000 > ./OpenAugSca10K.fa #(checked)
+
+
 #3 PLANT_August_scaffold.fa
-pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Aug_Plant_Surface/PLANT_August_scaffold.fa -m 10000 > ./PlantAugSca10K.fa
+pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Aug_Plant_Surface/PLANT_August_scaffold.fa -m 10000 > ./PlantAugSca10K.fa #checked
+
+
 #4 Nov_Mud_scaffold.fa
 pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Nov_Mud_Surface/Nov_Mud_scaffold.fa -m 10000 > ./MudNovSca10K.fa
+#checked
+
 
 #5 Nov_plant_scaffold.fa
-pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Nov_Plant_Surface/Nov_plant_scaffold.fa -m 10000 > ./PlantNovSca10K.fa
+pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Nov_Plant_Surface/Nov_plant_scaffold.fa -m 10000 > ./PlantNovSca10K.fa . #checked
 
-#6 Nov_plant_scaffold.fa
-pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Nov_Open_Surface/Nov_open_scaffold.fa -m 10000 > ./OpenNovSca10K.fa
+#6 Nov_open_scaffold.fa
+pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/Nov_Open_Surface/Nov_open_scaffold.fa -m 10000 > ./OpenNovSca10K.fa #checked
 
 #7, Mud_coassembly, scaffold.fa
 pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/coassemblies/Mud/scaffold.fa -m 10000 > MudCoSca10K.fa
+#checked
 
 #8
 pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/coassemblies/Open/scaffold.fa -m 10000 > OpenCoSca10K.fa
+#checked
 
 #9
 pullseq -i /home/projects/Wetlands/2014-2015_sampling/MetaG/coassemblies/Plant/scaffold.fa -m 10000 > PlantCoSca10K.fa
+#checked
 
 ```
 
@@ -55,7 +66,6 @@ echo "${file%.*}"
 sed -i -e "s/>\(scaffold.*\)/>"${file%.*}"_\1/1" $file
 done
 ```
-
 
 ```
 
@@ -81,7 +91,6 @@ cd ../../
 done 
 #336 sequences
 
-#this 336 seqs without duplications
 
 
 ```
@@ -95,6 +104,7 @@ cd ../../
 done 
 
 
+
 #add data to virsort_all_10K
 ```
 https://github.com/liupfskygre/virus_in_metagenome/blob/master/vOTU_Virus_contigs_clustering.md
@@ -105,5 +115,28 @@ cat /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/Virus_metaG2014_15/
 #5769 +336 ==6105
 ```
 
-#
+#update Jan-25-2020
+```
+
+#this 336 seqs with 26 PlantNovSca10K duplications
+
+#this is right, 26 seqs
+for file in PlantNovSca10K
+do
+cd ./PlantNovSca10K/Predicted_viral_sequences/
+echo "${file%.*}"
+grep -c '>' *_cat-1.fasta *_cat-2.fasta *_prophages_cat-4.fasta *_prophages_cat-5.fasta 
+cd ../../
+done 
+
+#also checked for all 9, no missing dataset. 
+OWC2014_virus_scaffold10K.fasta
+
+grep '>'  OWC2014_virus_scaffold10K.fasta>header.OWC2014_virus_scaffold10K.txt
+sed -e 's/>VIRSorter_//g' header.OWC2014_virus_scaffold10K.txt >header.OWC2014_virus_scaffold10K_sed.txt
+sed -i -e 's/_scaff.*$//g' header.OWC2014_virus_scaffold10K_sed.txt
+cat header.OWC2014_virus_scaffold10K_sed.txt| sort|uniq #-->9
+
+```
+
 

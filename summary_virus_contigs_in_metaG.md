@@ -303,7 +303,7 @@ OWC_virsorter_10K_all.fa
 #
 #move to generate vOTU by 95-80 cutoff by Cluster_genomes_5.1.pl, 
 
-#then vConTACT2_0.9.8 on vOTU to generate vOTU clusters
+#then vConTACT2_0.9.8 on vOTU to generate vOTU clusters and tax classification
 ```
 
 

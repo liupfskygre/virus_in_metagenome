@@ -79,7 +79,7 @@ grep -c '>' *cat-5.fasta
 
 ```
 
-#3, summit
+## 3, summit, 
 ```
 cd /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit
 
@@ -88,8 +88,8 @@ mkdir OUT_virsorter_from_summit
 # rename tsv file and contigs file;  
 # metaG.list, remove metaG from 2018, which has being done on zenith
 
-####
-for file in $(cat metaG.list)
+## 
+for file in $(cat metaG.list)  #12 samples
 do 
 cd "${file}"
 cp VIRSorter_global-phage-signal.csv /home/projects/Wetlands/OWC_viral_from_metaG/virsorter_from_summit/OUT_virsorter_from_summit/"${file}"_VIRSorter_global-phage-signal.csv

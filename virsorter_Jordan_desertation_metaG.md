@@ -80,6 +80,10 @@ cat *_cat-1.fasta *_cat-2.fasta *_prophages_cat-4.fasta *_prophages_cat-5.fasta 
 cd ../../
 done 
 #336 sequences
+
+#this 336 seqs without duplications
+
+
 ```
 #
 for file in *.fa

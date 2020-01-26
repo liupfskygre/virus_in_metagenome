@@ -307,4 +307,20 @@ OWC_virsorter_10K_all.fa
 ```
 
 
+##update Jan-25-2020
+```
+#26 seqs duplicates in vOTU 4436, not remove by Cluster_genomes_5.1.pl
+#
+duplicates_in_vOTU4436.duped.fa #generate from seqkit
+
+#exclude the duplicates (52) seqs
+pullseq -i OWC_virsorter_10K_all_95-80.fna -e -n duplicates_in_vOTU4436.txt >VIRSorter_PlantNovSca10K_scaffold26.fa
+
+#adding back the duplicates back
+cat VIRSorter_PlantNovSca10K_scaffold26.fa duplicates_in_vOTU4436.duped.fa >OWC_virsorter_10K_all_95-80_v4410.fna
+
+
+```
+
+
 

@@ -35,19 +35,27 @@ done
 #2, cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/virsorter_from_summit/
 sample list --> #metaG_running_on_summit.list #12 samples
  
-
+for file in $(cat metaG_running_on_summit.list)
+do
+cp "${file}"/Metric_files/VIRSorter_affi-contigs.tab /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/VIRSorter_affi_contigs_tab_OWC39/"${file}"_VIRSorter_affi-contigs.tab
+done
 
 #3, /home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Deep/virsorter-out/Metric_files/VIRSorter_affi-contigs.tab
 #-->1 sample 
+cp /home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Deep/virsorter-out/Metric_files/VIRSorter_affi-contigs.tab /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/VIRSorter_affi_contigs_tab_OWC39/OwcDeepSubCoMC_VIRSorter_affi-contigs.tab
 
+ 
 
 #4,  /home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Surface/virsorter_co_megahit_Surface_10K/Metric_files/VIRSorter_affi-contigs.tab 
 #-->1 sample 
-
+cp /home/projects/Wetlands/All_genomes/OWC_subtractive_megahit_coassembly/OWC_substrative_co_megahit_Surface/virsorter_co_megahit_Surface_10K/Metric_files/VIRSorter_affi-contigs.tab /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/VIRSorter_affi_contigs_tab_OWC39/OwcSurfSubCoMC_VIRSorter_affi-contigs.tab
 
 #5, cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/Virus_metaG2014_15
 # -->9 samples
-
+for file in $(cat sample.list)
+do
+cp "${file}"/Metric_files/VIRSorter_affi-contigs.tab /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/VIRSorter_affi_contigs_tab_OWC39/"${file}"_VIRSorter_affi-contigs.tab
+done
 
 #collect all affi file for dramV, VIRSorter_affi-contigs.tab
 mkdir /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/VIRSorter_affi_contigs_tab_OWC39

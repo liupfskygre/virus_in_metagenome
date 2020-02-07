@@ -26,6 +26,10 @@ OWC_virsorter_10K_all.fa . # all putative conitigs with virsorter cat-1, 2, 4, 5
 #location of VIRSORTER_AFFI_CONTIGs in Metric_files
 #1, cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/virsorter_from_zenith 
 # sample list --> metaG.list  (16)
+for file in $(cat metaG.list)
+do
+cp "${file}"_virsorter-out/Metric_files/VIRSorter_affi-contigs.tab /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/VIRSorter_affi_contigs_tab_OWC39/"${file}"_VIRSorter_affi-contigs.tab
+done
 
 
 #2, cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/virsorter_from_summit/
@@ -43,6 +47,10 @@ sample list --> #metaG_running_on_summit.list #12 samples
 
 #5, cd /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/Virus_metaG2014_15
 # -->9 samples
+
+
+#collect all affi file for dramV, VIRSorter_affi-contigs.tab
+mkdir /home/projects/Wetlands/All_genomes/OWC_viral_from_metaG/VIRSorter_affi_contigs_tab_OWC39
 
 
 ```

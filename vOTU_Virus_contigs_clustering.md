@@ -1,5 +1,20 @@
 #cyverse vOTU clustering
 
+#update
+```
+using -c 85, -i 95 as 
+
+#all new update by Reb are here
+/home/projects/across_ecosystems_viral_04_2020/OWC_only/OWC_all_unclustered_viruses_051920_95-85.clstr
+
+6,716 viruses after clustering!
+Fasta is: OWC_all_unclustered_viruses_051920_95-85.fna
+
+Sometimes VirSorter trims a prophage to under 10 kb
+Now have 6645 viral contigs. Use this file: OWC_viral_clustered_95_85_10kb_060420.fasta   One is almost 300kb!
+```
+
+
 #Viruses_Pengfei_11_1_19.docx
 
 #ClusterGenomes’ (v 1.1.3) app in CyVerse using the parameters 95% average nucleotide identity and 80% alignment fraction of the smallest contig. 

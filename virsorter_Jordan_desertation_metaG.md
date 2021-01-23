@@ -91,10 +91,9 @@ cd ../../
 done 
 #336 sequences
 
-
-
 ```
 #
+```
 for file in *.fa
 do
 cd "${file%.*}"/Predicted_viral_sequences/
@@ -102,7 +101,7 @@ echo "${file%.*}"
 grep -c '>' *_cat-1.fasta *_cat-2.fasta *_prophages_cat-4.fasta *_prophages_cat-5.fasta 
 cd ../../
 done 
-
+```
 
 
 #add data to virsort_all_10K

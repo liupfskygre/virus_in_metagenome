@@ -11,7 +11,7 @@
 #
 #>VIRSorter
 screen -S awk_split
-awk '/^>VIRSorter/ {OUT=substr($0,2) ".fa"}; OUT {print >OUT}' OWC_virsorter_10K_all_95-80.fna 
+awk '/^>VIRSorter/ {OUT=substr($0,2) ".fa"}; OUT {print >OUT}' OWC_virsorter_10K_all_95-80.fna
 
 #
 ```
@@ -31,21 +31,21 @@ cd /home/projects/Wetlands/All_genomes/OWC_MAGs_dRep_19Sept19/OWC_MAGs_19Sept19_
 #1 copy all genomes to Unity  dereplicated_genomes_3211
 
 #2 remove genomes with Anvio clean and add Anvio cleaned genomes back (total 20)
-#Anvio-cleaned--part are in all dRep genomes, add all 20 Anvio clean genomes in, 
-# remove not cleaned duplicates (13), 
+#Anvio-cleaned--part are in all dRep genomes, add all 20 Anvio clean genomes in,
+# remove not cleaned duplicates (13),
 #Anovio_cleaned_duplicated_remove.list  (13)
 #Anvio_cleaned_additional.list (7 additional from MGdb to MG3211 db)
 
 
 #3, Check renamed Methaongen genomes (5)
 
-#4, check genomes with mcrA, not in dRep genomes, bring them back (2). 
+#4, check genomes with mcrA, not in dRep genomes, bring them back (2).
 #Two_w_mcrA_methanoG.list (from MGdb to MG3211 db)
 
 #5 mismatch between all dRep with Methanogens only dRep (After adding 9 methanogen genomes, we have 3211+9 host to search)
 ```
 
-#on unity, 
+#on unity,
 ```
 cd /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/host
 touch Two_w_mcrA_methanoG.list
@@ -58,14 +58,14 @@ cp /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/host/*Anvio*.fa ./
 
 #
 for file in  $(cat Two_w_mcrA_methanoG.list)
-do 
+do
 cp ${file}.fa /home/pengfei.2/OWC_dRep_3211_MAGs
-done 
+done
 
 #
 cd /home/pengfei.2/OWC_dRep_3211_MAGs
 for file in  $(cat /home/pengfei.2/OWC_wetland_virsorter10K/OWC_MGdb89_bins/host/Anovio_cleaned_duplicated_remove.list)
-do 
+do
 mv ${file}.fa /home/pengfei.2/
 done
 #mv O3C3D3_DDIG_MN_Anvio.967..fa O3C3D3_DDIG_MN_Anvio.967.fa
@@ -113,7 +113,7 @@ python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b /home/pengfe
 #grep -c '>' OWC_virsorter_10K_all_95-80.fna ;
 # 4436 #update 14-Nov-2019
 # but only 4410 virus genomes generate to match 3220 MAGs
-#reasson for this: 4410 uniq names; 
+#reasson for this: 4410 uniq names;
 
 
 #qstat 1425822
@@ -122,7 +122,7 @@ python /fs/byo/wrighton-data1/opt/VirHostMatcher/vhm.py -v virus -b /home/pengfe
 
 #update on 23-Nov-2019
 ```
-# Cluster_genomes_5.1.pl 
+# Cluster_genomes_5.1.pl
 # after clustering, 26 duplicates sequences still exists???
 ```
 
